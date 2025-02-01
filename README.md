@@ -6,13 +6,13 @@ This project implements a simple proxy server that allows a client to send GET r
 ## Components
 The project consists of two main Java programs:
 
-1. **HW1Server.java** (Proxy Server)
+1. **Server.java** (Proxy Server)
    - Listens for client connections on a specified port.
    - Handles multiple client requests using multithreading.
    - Forwards HTTP GET requests to the appropriate remote web server.
    - Relays the response from the web server back to the client.
 
-2. **HW1Client.java** (Client)
+2. **Client.java** (Client)
    - Connects to the proxy server on the specified host and port.
    - Sends HTTP GET requests to the proxy server.
    - Receives and saves the server response to a local file.
@@ -22,19 +22,19 @@ The project consists of two main Java programs:
 ### 1. Compile the Code
 Ensure you have Java installed. Compile both the server and client programs using:
 ```sh
-javac HW1Server.java HW1Client.java
+javac Server.java Client.java
 ```
 
 ### 2. Run the Proxy Server
 Start the server on a specific port (e.g., 8080):
 ```sh
-java HW1Server 8080
+java Server 8080
 ```
 
 ### 3. Run the Client
 Connect the client to the proxy server:
 ```sh
-java HW1Client <server_host> 8080
+java Client <server_host> 8080
 ```
 Replace `<server_host>` with the actual hostname or IP address where the server is running.
 
